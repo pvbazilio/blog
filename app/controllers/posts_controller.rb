@@ -5,6 +5,7 @@ class PostsController < ApplicationController
   end
 
   def show
+    @user = User.find(params[:user_id])
     @post = Post.find(params[:id])
   end
 
@@ -13,10 +14,10 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new(params[:id])
+    @post = Post.new(post_params)
     @post.save
     if @post.save
-      redirect_to posts_path(@post)
+      redirect_to post_path(:id)
     else
       render :new
     end
