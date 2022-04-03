@@ -1,5 +1,12 @@
-<ul>
-  <% @posts.each do |post| %>
-    <li><%= post.title %></li>
-  <% end %>
-</ul>
+<main>
+  <div class="container w-80">
+    <h2 class="fw-bold pb-5">Posts</h2>
+    <div class="row">
+      <div class="col-12">
+        <% @posts.each do |post|%>
+        <p><%= post.title %></p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</main>
