@@ -1,0 +1,19 @@
+<main>
+  <div class="container w-80">
+    <h2 class="fw-bold pb-5">Crie seu post</h2>
+    <div class="row">
+      <div class="col-12">
+        <%= simple_form_for (@post) do |f|  %>
+        <%= f.input :title %>
+        <%= f.input :description %>
+        <%= f.input :published %>
+
+        <div class="py-3">
+          <%= f.button :submit, class:"btn btn-outline-primary" %>
+          <%= link_to 'Cancelar', user_path(@user), class: "btn btn-outline-danger" %>
+        </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</main>
