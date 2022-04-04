@@ -1,11 +1,13 @@
 class PostsController < ApplicationController
+  before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index, :show]
+  #before_action :is_admin!, except: [:index, :show]
 
   def index
     @posts = Post.all
   end
 
   def show
-    @user = User.find(params[:user_id])
     @post = Post.find(params[:id])
   end
 
@@ -15,16 +17,34 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
+    @post.user = current_user
     if @post.save
-      redirect_to post_path(@post)
+      redirect_to post_path(@post), notice: 'A publicação foi criada com sucesso!'
     else
       render :new
     end
   end
 
+  def update
+    if @post.update(post_params)
+      redirect_to post_path(@post), notice: 'A publicação foi atualizada com sucesso!'
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @post.destroy
+    redirect_to posts_url
+  end
+
   private
 
+  def set_post
+    @post = Post.find(params[:id])
+  end
+
   def post_params
-    params.require(:post).permit(:title, :description, :published, :published_at)
+    params.require(:post).permit(:title, :description, :published, :published_at, :body, :thumbnail, :banner)
   end
 end

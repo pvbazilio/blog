@@ -3,15 +3,13 @@
 one:
   title: MyString
   description: MyText
-  published: MyString
-  boolean: MyString
-  published_at: 2022-04-02 22:08:53
+  published: false
+  published_at: 2022-04-04 12:36:28
   user: one
 
 two:
   title: MyString
   description: MyText
-  published: MyString
-  boolean: MyString
-  published_at: 2022-04-02 22:08:53
+  published: false
+  published_at: 2022-04-04 12:36:28
   user: two
