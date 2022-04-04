@@ -31,6 +31,7 @@ gem 'bootsnap', '>= 1.4.4', require: false
 gem 'devise'
 
 gem 'simple_form', github: 'heartcombo/simple_form'
+gem "font-awesome-sass"
 
 
 group :development, :test do

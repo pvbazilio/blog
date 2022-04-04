@@ -1,2 +1,43 @@
-<h1>Pages#index</h1>
-<p>Find me in app/views/pages/index.html.erb</p>
+<div class="container">
+    <div class="me">
+      <div class="text">
+       <h2 class= "titulo">Olá, eu sou o Paulo!</h2>
+        <p> Full-Stack Web Development </p>
+
+        <a href="Curriculo Paulo Bazilio.pdf" download="Curriculo Paulo Bazilio.pdf"  type="application/pdf" class= "btn btn-danger">Download CV
+          <i class="fa-solid fa-cloud-arrow-down"></i>
+        </a>
+        <a href="mailto:pvbazilio@gmail.com" class="btn btn-outline-danger">Fale comigo
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+
+      </div>
+      <div class="img-svg">
+        <img src="<%= asset_path('Coding-bro.svg') %>" alt="Binary-code-svg">
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="tecnologias">
+        <h3>Tecnologias</h3>
+      </div>
+      <div class= "stack">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rails/rails-plain.svg" width=80/>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ruby/ruby-plain-wordmark.svg" width=80/>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" width=80/>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain-wordmark.svg" width=80/>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain-wordmark.svg" width=80/>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" width=80 />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" alt="scss" width="80"/>
+      </div>
+
+      <div class="study">
+        <h3>Em desenvolvimento</h3>
+      </div>
+      <div class="development">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width=80 />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width=80/>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" width=80/>
+      </div>
+  </div>
+</div>
