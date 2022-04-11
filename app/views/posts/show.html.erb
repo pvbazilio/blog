@@ -1,9 +1,19 @@
-<main>
-  <div class="container w-80">
-    <div class="col-12">
-      <div class="fw-bold">
-        <%= @post.title %>
+<div class="content">
+<div class="porra">
+      <div class="banner">
+          <%= image_tag(@post.banner) %>
       </div>
+
+    <div class="container">
+      <div class="jumbotron">
+        <h1 class="title"> <%= @post.title %> </h1>
+        <p class="published"><%= @post.published_at .strftime("%A, %B %e, %Y") %></p>
+        <p class= "description"> <%= @post.description %> </p>
+      </div>
+
+        <div>
+        <%= link_to "Delete", posts_path(@post), method: :delete, data: { confirm: "Are you sure?" }, class:"btn btn-danger" %>
+        </div>
     </div>
   </div>
-</main>
+</div>

@@ -1,12 +1,12 @@
-<main>
-  <div class="container w-80">
-    <h2 class="fw-bold pb-5">Posts</h2>
+<div class="container">
+  <% @posts.each do |post| %>
     <div class="row">
-      <div class="col-12">
-        <% @posts.each do |post|%>
-        <p><%= post.title %></p>
-        <% end %>
+      <div class="card mb-3">
+        <img class="card-img-top"
+         src="<%= url_for post.optmized_image(post.thumbnail, 586, 180) %>"
+         alt="Blog Post Image Card"
+        />
       </div>
     </div>
-  </div>
-</main>
+  <% end %>
+</div>

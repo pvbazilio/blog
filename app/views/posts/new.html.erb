@@ -6,10 +6,11 @@
         <%= simple_form_for(@post) do |f|  %>
         <%= f.input :title %>
         <%= f.input :banner %>
-        <%= f.input :description %>
         <%= f.input :thumbnail %>
         <%= f.input :published %>
         <%= f.input :published_at %>
+        <%= f.input :description %>
+        <%= f.rich_text_area :rich_body %>
 
         <div class="py-3">
           <%= f.button :submit, class:"btn btn-outline-danger" %>

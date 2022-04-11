@@ -18,11 +18,8 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     @post.user = current_user
-    if @post.save
-      redirect_to post_path(@post), notice: 'A publicação foi criada com sucesso!'
-    else
-      render :new
-    end
+    return redirect_to post_path(@post), notice: 'A publicação foi criada com sucesso!' if @post.save
+    render :new
   end
 
   def update
@@ -35,7 +32,7 @@ class PostsController < ApplicationController
 
   def destroy
     @post.destroy
-    redirect_to posts_url
+    redirect_to posts_path
   end
 
   private
