@@ -10,8 +10,13 @@ Bundler.require(*Rails.groups)
 module Blog
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
+    config.renerators do |generate|
+      generate.assets false
+      generate.helper false
+      generate.test_framework :test_unit, fixture: false
+    end
+
     config.load_defaults 6.1
-    config.assets.initialize_on_precompile = false
 
     # Configuration for the application, engines, and railties goes here.
     #
