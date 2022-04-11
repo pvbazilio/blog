@@ -11,10 +11,6 @@ config.assets.initialize_on_precompile = false
 module Blog
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
-    config.generators do |generate|
-      generate.assets false
-      generate.helper false
-    end
 
     config.load_defaults 6.1
     config.assets.initialize_on_precompile = false
