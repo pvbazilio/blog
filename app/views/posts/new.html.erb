@@ -5,8 +5,8 @@
       <div class="form col-12">
         <%= simple_form_for(@post) do |f|  %>
         <%= f.input :title %>
-        <%= f.input :banner %>
-        <%= f.input :thumbnail %>
+        <%= f.input :banner, as: :file %>
+        <%= f.input :thumbnail, as: :file %>
         <%= f.input :published %>
         <%= f.input :published_at %>
         <%= f.input :description %>
