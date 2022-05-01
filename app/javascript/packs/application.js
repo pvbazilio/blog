@@ -14,7 +14,6 @@ Turbolinks.start()
 ActiveStorage.start()
 
 import "@fortawesome/fontawesome-free/js/all";
-import "controllers"
 import "bootstrap"
 
 require("trix")
